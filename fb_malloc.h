@@ -20,8 +20,9 @@
 typedef struct s_allocated_block {
 	struct s_allocated_block	*prev;
 	struct s_allocated_block	*next;
-	int							size;
+	size_t						size;
 	int							is_freed;
+	void						*data;
 }	t_allocated_block;
 
 typedef struct s_heap_region {
@@ -32,5 +33,6 @@ typedef struct s_heap_region {
 }	t_heap_region;
 
 void	*fb_malloc(size_t size);
+void	fb_free(void *ptr);
 
 #endif
