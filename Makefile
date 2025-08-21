@@ -12,7 +12,7 @@
 
 NAME = fb_malloc.a
 
-SRCS = fb_malloc.c
+SRCS = fb_malloc.c logger.c
 
 CFLAGS = -Wall -Wextra -Werror
 
